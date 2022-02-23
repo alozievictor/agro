@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width: 100%;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #2f7404;
+    position: fixed;
+    z-index: 100;
+}
+.logo{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+}
+.nav-links{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    /* margin: auto; */
+}
+.nav-links li{
+    list-style: none;
+    border: 1px solid transparent;
+    padding: 5px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+}
+.nav-links a{
+    color: rgb(228, 220, 220);
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size:18px;
+    padding:0 10px;  
+    text-align: center; 
+    transition: .5s;
+    position: relative;
+} 
+a:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(226, 240, 224);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+a:hover:after{
+   width: 100%;
+    transition: .2s ease-in-out;
+}
+.nav-links a:hover {
+    color: #fff;
+    
+}
+.burger{
+    display: none; /* to hide the burger icon*/
+}
+.burger{
+    display: none; /* to hide the burger icon*/
+}
+.burger div{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: rgb(216, 212, 212);
+
+}
+@media screen and (max-width:1024px) {
+    .nav-links{
+        width: 50%;
+    }
+}
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+        /* background:rgb(224, 159, 192); */
+    }
+    
+    .text{
+        font-size: 20px;
+        flex-direction: column;
+    }
+    /* nav{
+        position: fixed;
+        width: 100%;
+    } */
+    .nav-links{
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        top: 10vh;
+        height: 50vh;
+        line-height: 50px;
+        background:#050505;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.5s ease-in;
+        transform: translateX(100%); /* moves the sidebar dropdown away*/
+        overflow: hidden;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+}
+@keyframes navLinkfade{
+    from{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+} 
+
+main{
+    width: 100%;
+
+}
+.container-fluid{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/tractor1.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.header-text{
+    /* display: flex; */
+    width: 45%;
+    color: #fff;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    left: 70%;
+    top: 40%;
+    transform: translate(-50%,50%);
+}
+.fol{
+    width: 50%;
+    position: absolute;
+    left: 72%;
+    top: 47%;
+    transform: translate(-50%,50%);
+    color: #fff;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-click{
+    width: 170px;
+    height: 60px;
+    position: absolute;
+    left: 65%;
+    top: 60%;
+    transform: translate(-50%);
+    background-color: rgb(199, 190, 190);
+    color:rgb(0, 0, 0);
+    font-size:25px;
+    font-weight: 500;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 0 0 5px 0;
+    transition: 0.3s;
+
+} 
+.btn-click:hover{
+    border: 3px solid green;
+    color: green;
+}
+#main2{
+    width: 100%;
+}
+.rounded{
+    width: 150px;
+    padding: 10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.info{
+    text-align: center;
+    color: #050505;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* padding: 10px;   */
+}
+.info-text{
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}#cont{
+    position: relative;
+    width: 50%;
+}
+.intro{
+    font-size: 22px;
+    font-weight: 600;
+    color: #050505;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.dis{
+    font-size: 20px;
+    font-weight: 600;
+}
+.dis{
+    position: relative;
+    top: 20%;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.tex{
+    position: relative;
+    top: 23%;
+    text-align: justify;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(66, 68, 68, 0.712);
+    /* text-transform: capitalize; */
+}
+.btn{
+    position: relative;
+    top: 23%;
+    text-transform: capitalize;
+} 
+
+
